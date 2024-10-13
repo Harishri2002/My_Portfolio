@@ -1,0 +1,18 @@
+[
+    {
+      "title": "Node.js",
+      "imageSrc": "skills/node.png"
+    },
+    {
+      "title": "MongoDB",
+      "imageSrc": "skills/MongoDB.png"
+    },
+    {
+        "title": "Express",
+        "imageSrc": "skills/Express.png"
+      },
+      {
+        "title": "MySql",
+        "imageSrc": "skills/MySQL.png"
+      }
+  ]
