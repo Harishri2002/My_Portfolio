@@ -1,14 +1,14 @@
 [
     {
-      "title": "Project A",
+      "title": "Liblinx",
       "imageSrc": "projects/project.png",
-      "description": "This is a project made to learn the latest languages by building an app.",
-      "skills": ["React", "Express", "Node"],
+      "description": "Liblinx is a modern library management system featuring QR code entry and an integrated Android app for seamless book rentals and tracking. It also includes a MERN stack-based admin panel, enabling efficient management of library operations, user accounts, and inventory, all in one streamlined platform.",
+      "skills": ["React", "Express", "Node","MongoDB","React-native"],
       "demo": "https://www.example.com",
       "source": "https://www.github.com"
     },
     {
-      "title": "Project B",
+      "title": "Crafty Corner",
       "imageSrc": "projects/project.png",
       "description": "This is a project made to learn the latest languages by building an app.",
       "skills": ["React", "Express", "Node", "Sass"],

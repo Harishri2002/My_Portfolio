@@ -30,8 +30,9 @@ export const About = () => {
                     <li className={styles.aboutItem}>
                         <img src={getImageUrl("about/uiIcon.png")} alt="Cursor image" />
                         <div className={styles.aboutItemText}>
-                        <h3>Game Development</h3>
-                        <p>I am passionate about game development and eager to contribute my skills..</p>
+                        <h3>UI/UX</h3>
+                        <p>I have expertise in UI/UX design, creating intuitive and engaging interfaces, and have 
+                            also worked on 3D modeling projects, applying my skills in both areas separately.</p>
                         </div>
                     </li>
                 </ul>
