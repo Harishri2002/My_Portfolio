@@ -5,6 +5,7 @@
   color: var(--color-text);
   margin-left: 10%;
   margin-right: 10%;
+ 
 }
 
 .title {
@@ -21,7 +22,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 15px;
+  gap: 45px;
   width: 100%;
 }
 
