@@ -4,7 +4,7 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import * as THREE from "three";
 
 export const Station = () => {
-  const { scene, animations } = useGLTF('../../assets/3dmodels/SpaceBoy/scene.gltf');
+  const { scene, animations } = useGLTF('/3dmodels/SpaceBoy/scene.gltf');
 
   const [mixer] = useState(() => new THREE.AnimationMixer());
 

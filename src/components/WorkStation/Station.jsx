@@ -3,7 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls,Preload,useGLTF } from "@react-three/drei";
 
 export const Station = () => {
-   const station = useGLTF('../../assets/3dmodels/scene.gltf')
+   const station = useGLTF('/3dmodels/scene.gltf')
   return (
         <mesh>
             <hemisphereLight intensity={9.15} />

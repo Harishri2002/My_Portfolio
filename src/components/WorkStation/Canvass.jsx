@@ -5,7 +5,7 @@ import { Station } from "./Station";
 import { LoaderProg } from "./LoaderProg";
 
 export const Canvass = () => {
-    const station = useGLTF('../../assets/3dmodels/scene.gltf')
+    const station = useGLTF('/3dmodels/scene.gltf')
    return (
         <Canvas style={{ width: '48vw', height: '50vh' }}
         frameLoop="demand"
