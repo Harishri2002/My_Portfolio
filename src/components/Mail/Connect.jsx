@@ -37,7 +37,7 @@ export const Connect = () => {
   };
 
   return (
-    <div className={styles.Main}>
+    <div className={styles.Main} id="contact">
      <h2 className={styles.title}>Contact</h2>
     <div className={styles.DataForm}>
         
