@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import styles from "./Connect.module.css";
 import Swal from 'sweetalert2';
-
+import {Land} from "../Energy/Land";
 export const Connect = () => {
   const form = useRef();
 
@@ -54,7 +54,7 @@ export const Connect = () => {
         </form>
       </div>
       <div className={styles.SecondPart}>
-        adfa
+          <Land/>
       </div>
     </div>
     </div>
