@@ -10,16 +10,16 @@ export const Contacts = () => {
       <div className={styles.links}>
         <ul>
           <li className={styles.link}>
-            <img src="\..\..\assets\contact\emailIcon.png" alt="Email Icon" />
+            <img src="/contact/emailIcon.png" alt="Email Icon" id="mail" />
             <a href="harishribr4@gmail.com">harishribr4@gmail.com</a>
           </li>
           <li className={styles.link}>
-            <img src="\..\..\assets\contact\githubIcon.png" alt="Github Icon" />
+            <img src="/contact/githubIcon.png" alt="Github Icon" />
             <a href="https://github.com/Harishri2002">Harishri B R</a>
           </li>
           <li className={styles.link}>
             <img
-              src="\..\..\assets\contact\linkedinIcon.png"
+              src="/contact/linkedinIcon.png"
               alt="Linked Icon"
             />
             <a href="www.linkedin.com/in/harishri-b-r">Harishri</a>

@@ -27,7 +27,7 @@ export const Hero = () => {
   return (
     <section className={styles.mainbody}>
       <div className={styles.content}>
-        <h1 className={styles.title}>Hi, I'm {text}<Cursor cursorStyle="<" cursorColor='#FFFF00' /></h1>
+        <h1 className={styles.title}>Hi, I'm {text}<Cursor cursorStyle="<" cursorColor='#FFFFFF' /></h1>
         <p className={styles.paragraph}>
           Meet Harishri – a tech enthusiast with a flair for crafting awesome web experiences and addictive games.
           Always on the lookout for the next big thing in tech, he's constantly pushing boundaries and creating cool stuff. 

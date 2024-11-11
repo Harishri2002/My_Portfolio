@@ -5,7 +5,6 @@ import * as THREE from "three";
 
 export const Ball = () => {
   const { scene, animations } = useGLTF('/3dmodels/energy.glb');
-
   const [mixer] = useState(() => new THREE.AnimationMixer());
 
   useEffect(() => {
@@ -16,22 +15,36 @@ export const Ball = () => {
     return () => mixer.stopAllAction(); // Cleanup on unmount
   }, [animations, scene, mixer]);
 
+  useEffect(() => {
+    // Ensure materials respond to standard lighting
+    scene.traverse((child) => {
+      if (child.isMesh) {
+        child.material = new THREE.MeshStandardMaterial({
+          color: child.material.color,
+          roughness: 0.5,
+          metalness: 0.5,
+        });
+      }
+    });
+  }, [scene]);
+
   useFrame((_, delta) => mixer.update(delta));
 
   return (
     <mesh>
-      <hemisphereLight intensity={5.15} />
-      <pointLight intensity={10} />
+      <ambientLight intensity={1.3} />
+      <hemisphereLight intensity={1} color="white" groundColor="gray" />
+      <pointLight position={[0, 10, 10]} intensity={1841} />
       <spotLight
-        position={[-20, 60, 10]}
-        angle={2.12}
-        penumbra={1}
-        intensity={1}
+        position={[0, 20, 20]}
+        angle={0.3}
+        penumbra={0.5}
+        intensity={2}
         castShadow
         shadow-mapSize={1024}
       />
       <primitive 
-        scale={1.80}
+        scale={1.8}
         position={[0, 0, 0]}
         object={scene} 
       />

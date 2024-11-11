@@ -1,7 +1,7 @@
 @import "../../vars.css";
 
 .container {
-    background-image: url(/../../assets/contact/back.png); /* Ensure the path is correct */
+    background-image: url(/contact/back.png); /* Ensure the path is correct */
     background-size: cover; /* Ensure the image covers the entire container */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
