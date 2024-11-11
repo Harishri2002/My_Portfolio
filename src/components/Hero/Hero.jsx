@@ -34,7 +34,7 @@ export const Hero = () => {
           Get ready to be wowed by his creativity and passion as he takes the world of technology by storm!
         </p>
         <div className={styles.cont}>
-          <a className={styles.contact} href="#contact">Resume</a>
+          <a className={styles.contact} href="/HarishriBRResume.pdf" download={true}>Resume</a>
         </div>
       </div>
 

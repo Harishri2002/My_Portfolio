@@ -22,7 +22,6 @@
         rgba(255,255,255,1)70%,
         rgba(255,255,255,0)130%
     );
-    -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
 .paragraph{
