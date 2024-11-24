@@ -16,7 +16,7 @@ export const Land = () => {
 
     // Update FOV based on mobile view
     if (isMobile) {
-      setFov(5); // Set fov to 5 for mobile
+      setFov(15); // Set fov to 5 for mobile
     } else {
       setFov(10); // Reset fov to 10 for larger screens
     }
@@ -33,7 +33,7 @@ export const Land = () => {
       camera={{
         position: [25, 25, 25],
         fov: fov, // Use dynamic fov based on screen size
-        near: 1,
+        near:15,
         far: 1000,
       }}
       gl={{ preserveDrawingBuffer: true }}

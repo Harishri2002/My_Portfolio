@@ -4,8 +4,10 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import * as THREE from "three";
 
 export const Ball = () => {
-  const { scene, animations } = useGLTF('/3dmodels/energy.glb');
+  const { scene, animations } = useGLTF('/3dmodels/Info.glb');
   const [mixer] = useState(() => new THREE.AnimationMixer());
+  const [scale, setScale] = useState(1.8); // Default scale for larger screens
+  const [position, setPosition] = useState([0, 0, 0]);
 
   useEffect(() => {
     if (animations && animations.length > 0) {
@@ -28,12 +30,29 @@ export const Ball = () => {
     });
   }, [scene]);
 
+  useEffect(() => {
+    const updateScale = () => {
+      // Adjust scale based on screen width
+      if (window.innerWidth <= 768) {
+        setPosition([0, 3, 0]);
+        setScale(1); // Smaller scale for mobile
+      } else {
+        setPosition([0, 0, 0]);
+        setScale(1.8); // Default scale for larger screens
+      }
+    };
+
+    updateScale(); // Set scale on component mount
+    window.addEventListener("resize", updateScale); // Update scale on window resize
+    return () => window.removeEventListener("resize", updateScale); // Cleanup on unmount
+  }, []);
+
   useFrame((_, delta) => mixer.update(delta));
 
   return (
     <mesh>
       <ambientLight intensity={1.3} />
-      <hemisphereLight intensity={1} color="white" groundColor="gray" />
+      <hemisphereLight intensity={1} color="white" />
       <pointLight position={[0, 10, 10]} intensity={1841} />
       <spotLight
         position={[0, 20, 20]}
@@ -43,10 +62,10 @@ export const Ball = () => {
         castShadow
         shadow-mapSize={1024}
       />
-      <primitive 
-        scale={1.8}
-        position={[0, 0, 0]}
-        object={scene} 
+      <primitive
+        scale={scale} // Dynamic scale based on screen size
+        position={position}
+        object={scene}
       />
     </mesh>
   );

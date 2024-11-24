@@ -12,18 +12,6 @@ export const Hero = () => {
     deleteSpeed: 80,
   });
 
-  // State to track window width
-  // const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     setIsMobile(window.innerWidth <= 768);
-  //   };
-
-  //   window.addEventListener('resize', handleResize);
-  //   return () => window.removeEventListener('resize', handleResize);
-  // }, []);
-
   return (
     <section className={styles.mainbody}>
       <div className={styles.content}>
@@ -40,7 +28,6 @@ export const Hero = () => {
 
       {/* Conditionally render Space based on window width */}
       <Space className={styles.AstroModel} />
-      
       <div className={styles.topblur}></div>
       <div className={styles.bottomblur}></div>
     </section>

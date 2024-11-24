@@ -27,7 +27,7 @@ export const Space = () => {
 
   return (
     <Canvas
-      style={{ height: "80vh" }}
+      style={{ height: "80vh"}}
       frameLoop="demand"
       shadows
       camera={{

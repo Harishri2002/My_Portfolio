@@ -7,6 +7,31 @@ export const Station = () => {
   const { scene, animations } = useGLTF('/3dmodels/SpaceBoy/scene.gltf');
 
   const [mixer] = useState(() => new THREE.AnimationMixer());
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [modelSettings, setModelSettings] = useState({
+    scale: 1.8,
+    position: [-3, -3.25, 0.5],
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      const mobile = window.innerWidth <= 768;
+      setIsMobile(mobile);
+      
+      // Adjust model scale and position for mobile
+      setModelSettings({
+        scale: mobile ? 4.2 : 1.8, // Smaller scale for mobile
+        position: mobile ? [-4, -5.5, 0.5] : [-3, -3.25, 0.5], // Adjust position for smaller screens
+      });
+    };
+
+    // Initial setup
+    handleResize();
+
+    // Add resize listener
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     if (animations && animations.length > 0) {
@@ -30,10 +55,10 @@ export const Station = () => {
         castShadow
         shadow-mapSize={1024}
       />
-      <primitive 
-        scale={1.80}
-        position={[-2, -3.25, 0.5]}
-        object={scene} 
+      <primitive
+        scale={modelSettings.scale}
+        position={modelSettings.position}
+        object={scene}
       />
     </mesh>
   );
