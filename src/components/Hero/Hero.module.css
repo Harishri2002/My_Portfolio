@@ -107,8 +107,6 @@
         flex-direction:  column-reverse;
         
         margin-top: 30%;
-    
-        
     }
     .content{
         display: flex;
@@ -128,10 +126,9 @@
     }       
     .AstroModel{
         display: none;
+        visibility: none;
     }
     
-}
-.AstroModel{
 }
 
 .cont:hover {
