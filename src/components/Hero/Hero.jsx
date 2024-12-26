@@ -22,7 +22,7 @@ export const Hero = () => {
           Get ready to be wowed by his creativity and passion as he takes the world of technology by storm!
         </p>
         <div className={styles.cont}>
-          <a className={styles.contact} href="https://drive.google.com/uc?export=download&id=1ELEafNdQ7bUqu2MEjfFQomYkE1Jv_xtj" download={true}>Resume</a>
+          <a className={styles.contact} href="https://drive.google.com/uc?export=download&id=11NtVOKjPxUwd_q5apv2l6PpmFhP7KqFf" download={true}>Resume</a>
         </div>
       </div>
 
