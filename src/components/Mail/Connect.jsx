@@ -38,6 +38,10 @@ export const Connect = () => {
   return (
     <div className={styles.Main} id="contact">
       <h2 className={styles.title}>Contact</h2>
+      <p className={styles.description}>
+        Have a project in mind or just want to chat? Fill out the form below, and
+        I'll get back to you as soon as possible!
+      </p>
       <div className={styles.DataForm}>
         <div className={styles.FirstPart}>
           <form ref={form} onSubmit={sendEmail}>
