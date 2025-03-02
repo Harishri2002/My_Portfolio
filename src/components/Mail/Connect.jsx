@@ -32,7 +32,7 @@ export const Connect = () => {
             timer: 1500,
           });
         }
-      );
+      );//Promise Ends Here
   };
 
   return (
